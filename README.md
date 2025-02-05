@@ -30,6 +30,16 @@
 4. Stop MyVM1 using Azure CLI and MyVM2 using Azure PowerShell.
 5. Delete the virtual machines using the respective tools.
 
+![img](/screenshots/3_1.png)
+![img](/screenshots/3_2.png)
+![img](/screenshots/3_3.png)
+![img](/screenshots/3_4.png)
+![img](/screenshots/3_5.png)
+![img](/screenshots/3_6.png)
+![img](/screenshots/3_7.png)
+![img](/screenshots/3_8.png)
+![img](/screenshots/3_9.png)
+
 ## Practical Task 4: Manage Storage Accounts using Azure CLI and PowerShell
 
 1. Use Azure CLI to create a new storage account named mystoragecli in the East US region.

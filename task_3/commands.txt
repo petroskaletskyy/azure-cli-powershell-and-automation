@@ -1,0 +1,18 @@
+Azure CLI
+
+    1. az group create --name VMResourceGroup --location northeurope
+    2. az vm create --resource-group VMResourceGroup --name MyVM1 --image Ubuntu2204 --admin-username azureuser --generate-ssh-keys
+    3. az vm show --resource-group VMResourceGroup --name MyVM1 --output table
+    4. az vm show --resource-group VMResourceGroup --name MyVM2 --output table
+    5. az vm show --resource-group VMResourceGroup --name MyVM1 --output table
+    6. az vm stop --resource-group VMResourceGroup --name MyVM1
+    7. az vm delete --resource-group VMResourceGroup --name MyVM1 --yes
+    8. az group delete --name VMResourceGroup --yes
+
+Azure PowerShell
+
+    1. New-AzVM -ResourceGroupName 'VMResourceGroup' -Name 'MyVM2' -Location 'northeurope' -Image 'Win2019Datacenter' -Credential (Get-Credential)
+    2. Get-AzVM -ResourceGroupName 'VMResourceGroup' -Name 'MyVM1'
+    3. Get-AzVM -ResourceGroupName 'VMResourceGroup' -Name 'MyVM2'
+    4. Stop-AzVM -ResourceGroupName 'VMResourceGroup' -Name 'MyVM2' -Force
+    5. Remove-AzVM -ResourceGroupName 'VMResourceGroup' -Name 'MyVM2' -Force
