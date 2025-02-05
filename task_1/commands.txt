@@ -1,0 +1,12 @@
+Azure CLI
+
+    1. az --version                     # Check, if Azure CLi installed
+    2. az login                         # Log in to Azure using Azure CLI
+    3. az account list --output table   # List all available subscriptions using Azure CLI
+
+Azure PowerShell
+
+    1. Install-Module -Name Az -Repository PSGallery -Force         # Install Azure PowerShell
+    2. Get-Module -Name Az -ListAvailable                           # Verify installation, check Azure PowerShell Module
+    3. Connect-AzAccount                                            # Log in to Azure using Azure PowerShell
+    4. Get-AzSubscription                                           # List all available subscriptions using Azure PowerShell

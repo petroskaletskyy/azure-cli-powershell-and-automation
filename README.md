@@ -7,6 +7,9 @@
 3. Log in to your Azure account using both Azure CLI and PowerShell.
 4. List all available subscriptions in your Azure account using both tools.
 
+![img](/screenshots/1_1.png)
+![img](/screenshots/1_2.png)
+
 ## Practical Task 2: Create and Manage Resource Groups
 
 1. Use Azure CLI to create a new resource group named MyResourceGroup in the East US region.
