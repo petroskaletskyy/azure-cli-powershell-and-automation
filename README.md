@@ -18,6 +18,10 @@
 4. Delete the resource group MyResourceGroup using Azure CLI.
 5. Delete the resource group MyPSResourceGroup using Azure PowerShell.
 
+![img](/screenshots/2_1.png)
+![img](/screenshots/2_2.png)
+![img](/screenshots/2_3.png)
+
 ## Practical Task 3: Deploy and Manage Virtual Machines using Azure CLI and PowerShell
 
 1. Use Azure CLI to create a new virtual machine named MyVM1 in a new resource group VMResourceGroup.

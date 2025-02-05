@@ -1,0 +1,11 @@
+Azure CLI
+
+    1. az group create --name MyResourceGroup --location eastus                 # Create a new resource group named MyResourceGroup in the East US region
+    2. az group list --output table                                             # List all resource groups in your subscription
+    3. az group delete --name MyResourceGroup --yes --no-wait                   # Delete the resource group MyResourceGroup
+
+Azure PowerShell
+
+    1. New-AzResourceGroup -Name MyPSResourceGroup -Location "West Europe"      # Create a new resource group named MyPSResourceGroup in the West Europe region
+    2. Get-AzResourceGroup                                                      # create a new resource group named MyPSResourceGroup in the West Europe region
+    3. Remove-AzResourceGroup -Name MyPSResourceGroup -Force                    # Delete the resource group MyPSResourceGroup
