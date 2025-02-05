@@ -49,6 +49,12 @@
 5. Retrieve the connection string for the mystorageps storage account using Azure PowerShell.
 6. Delete both storage accounts using the respective tools.
 
+![img](/screenshots/4_1.png)
+![img](/screenshots/4_2.png)
+![img](/screenshots/4_3.png)
+![img](/screenshots/4_4.png)
+![img](/screenshots/4_5.png)
+
 ## Practical Task 5: Assign Role-Based Access Control (RBAC) Roles
 
 1. Create a new Azure Active Directory user named ```testuser@example.com``` using Azure CLI.
@@ -57,29 +63,35 @@
 4. Verify that the user has been assigned the correct roles using both CLI and PowerShell.
 5. Remove the user’s role assignments using the respective tools.
 
+![img](/screenshots/5_1.png)
+![img](/screenshots/5_2.png)
+![img](/screenshots/5_3.png)
+![img](/screenshots/5_4.png)
+![img](/screenshots/5_5.png)
+
 ## Practical Task 6: Set Up a Scalable Web Server with VM, Storage, and Networking
 
 1. Create a Resource Group
-2. Use Azure CLI to create a resource group named WebServerGroup in the East US region.
-3. Deploy a Virtual Network (VNet) and Subnet
-4. Use Azure CLI to create a virtual network named WebVNet in WebServerGroup.
-5. Add a subnet named WebSubnet.
-6. Create a Storage Account for Logs
-7. Use Azure PowerShell to create a storage account named webserverlogs in WebServerGroup.
-8. Enable blob storage and set up a container named logs for storing application logs.
-9. Deploy a Virtual Machine as a Web Server
-10. Use Azure CLI to create a virtual machine named WebVM in WebServerGroup.
-11. Configure WebVM to use the WebVNet and WebSubnet.
-12. Open port 80 on the VM for web traffic.
-13. Install and Configure Nginx on the VM
-14. Use Azure CLI to execute a script on WebVM that installs and configures Nginx as a web server.
-15. Enable Diagnostics and Store Logs in Storage Account
-16. Use Azure PowerShell to enable diagnostics on WebVM, directing logs to webserverlogs storage account.
-17. Verify the Web Server is Running
-18. Retrieve the public IP of WebVM using Azure CLI.
-19. Access the Nginx default page from a web browser using ```http://<Public-IP>```.
-20. Clean Up Resources
-21. Delete all created resources (WebVM, webserverlogs, WebVNet, WebServerGroup) using both Azure CLI and PowerShell.
+    - Use Azure CLI to create a resource group named WebServerGroup in the East US region.
+2. Deploy a Virtual Network (VNet) and Subnet
+    - Use Azure CLI to create a virtual network named WebVNet in WebServerGroup.
+    - Add a subnet named WebSubnet.
+3. Create a Storage Account for Logs
+    - Use Azure PowerShell to create a storage account named webserverlogs in WebServerGroup.
+    - Enable blob storage and set up a container named logs for storing application logs.
+4. Deploy a Virtual Machine as a Web Server
+    - Use Azure CLI to create a virtual machine named WebVM in WebServerGroup.
+    - Configure WebVM to use the WebVNet and WebSubnet.
+    - Open port 80 on the VM for web traffic.
+5. Install and Configure Nginx on the VM
+    - Use Azure CLI to execute a script on WebVM that installs and configures Nginx as a web server.
+6. Enable Diagnostics and Store Logs in Storage Account
+    - Use Azure PowerShell to enable diagnostics on WebVM, directing logs to webserverlogs storage account.
+7. Verify the Web Server is Running
+    - Retrieve the public IP of WebVM using Azure CLI.
+    - Access the Nginx default page from a web browser using ```http://<Public-IP>```.
+8. Clean Up Resources
+    - Delete all created resources (WebVM, webserverlogs, WebVNet, WebServerGroup) using both Azure CLI and PowerShell.
 
 ## Practical Task 7: Create and Run an Azure Automation Runbook
 

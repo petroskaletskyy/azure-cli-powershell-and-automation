@@ -1,0 +1,15 @@
+Azure CLI
+
+    1. az group create --name StorageResourceGroup --location eastus
+    2. az storage account create --name mycapstoragecli --resource-group StorageResourceGroup --location eastus --sku Standard_LRS
+    3. az storage account list --output table
+    4. az storage account show-connection-string --name mycapstoragecli --resource-group StorageResourceGroup --output table
+    5. az storage account delete --name mycapstoragecli --resource-group StorageResourceGroup --yes
+    6. az group delete --name StorageResourceGroup --yes
+
+Azure PowerShell
+
+    1. New-AZStorageAccount -ResourceGroupName 'StorageResourceGroup' -Name 'mycapstorageps' -Location 'West Europe' -SkuName 'Standard_LRS'
+    2. Get-AzStorageAccount
+    3. (Get-AzStorageAccount -ResourceGroupName 'StorageResourceGroup' -Name 'mycapstorageps').Context.ConnectionString
+    4. Remove-AzStorageAccount -ResourceGroupName 'StorageResourceGroup' -Name 'mycapstorageps' -Force

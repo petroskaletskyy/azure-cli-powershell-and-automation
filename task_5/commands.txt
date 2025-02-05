@@ -1,0 +1,13 @@
+Azure CLI
+
+    1. az ad user create --display-name 'Test User' --user-principal-name testuser@pskaletskyyukr.onmicrosoft.com --password 'YourStrongPassword123!'
+    2. az role assignment create --assignee <<id>> --role Reader --scope /subscriptions/<<subscription>>/resourceGroups/StorageResourceGroup
+    3. az role assignment list --assignee <<id>> --scope /subscriptions/<<subscription>>/resourceGroups/StorageResourceGroup
+    4. az role assignment delete --assignee <<id>> --role Reader --scope /subscriptions/<<subscription>>/resourceGroups/StorageResourceGroup 
+
+Azure PowerShell
+
+    1. $userId = (Get-AzADUser -UserPrincipalName "testuser@pskaletskyyukr.onmicrosoft.com").Id
+    2. New-AzRoleAssignment -ObjectId $userId -RoleDefinitionName "Contributor" -Scope "/subscriptions/<<subscription>>/resourceGroups/StorageResourceGroup/providers/Microsoft.Storage/storageAccounts/mycapstoragecli"
+    3. Get-AzRoleAssignment -SignInName 'testuser@pskaletskyyukr.onmicrosoft.com'
+    4. Remove-AzRoleAssignment -ObjectId $userId -RoleDefinitionName "Contributor" -Scope "/subscriptions/<<subscription>>/resourceGroups/StorageResourceGroup/providers/Microsoft.Storage/storageAccounts/mycapstoragecli"    
