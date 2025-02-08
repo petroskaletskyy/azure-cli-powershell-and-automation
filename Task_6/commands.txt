@@ -1,0 +1,35 @@
+# Create a Resource Group
+1. az group create --name WebServerGroup --location eastus
+
+# Deploy a Virtual Network (VNet) and Subnet
+2. az network vnet create --resource-group WebServerGroup --name WebVNet --address-prefix 10.0.0.0/16 --subnet-name WebSubnet --subnet-prefix 10.0.1.0/24
+
+# Create a Storage Account for Logs
+3. New-AzStorageAccount -ResourceGroupName 'WebServerGroup' -Name 'mycapwebserverlogs' -Location 'East US' -SkuName 'Standard_LRS' -Kind StorageV2
+4. $storageAccount = Get-AzStorageAccount -ResourceGroupName 'WebServerGroup' -Name 'mycapwebserverlogs'
+   $context = $storageAccount.Context
+   New-AzStorageContainer -Name 'logs' -Context $context
+
+# Deploy a Virtual Machine as a Web Server   
+5. az vm create --resource-group WebServerGroup --name WebVM --image Canonical:0001-com-ubuntu-confidential-vm-focal:20_04-lts-cvm:20.04.202111100 --admin-username azureuser --generate-ssh-keys --vnet-name WebVNet --subnet WebSubnet --public-ip-sku Standard 
+   az vm open-port --resource-group WebServerGroup --name WebVM --port 80
+
+# Install and Configure Nginx on the VM   
+6. az vm run-command invoke --resource-group WebServerGroup --name WebVM --command-id RunShellScript --script 'sudo apt update && sudo apt install -y nginx&& sudo apt -qq update && sudo apt install walinuxagent && curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash && sudo apt install -y wget && sudo apt install -y python2 && sudo update-alternatives --remove-all python && sudo update-alternatives --install /usr/bin/python python /usr/bin/python2 1'
+
+# Enable Diagnostics and Store Logs in Storage Account
+7. $resourceGroupName = "WebServerGroup"
+   $storageAccountName = $storageAccount.StorageAccountName
+   $storageAccountResourceGroup = $resourceGroupName
+   $storageAccountEndPoint = $storageAccount.PrimaryEndpoints.Blob
+   $vmName = "WebVM"
+   $VMresourceGroup = $resourceGroupName
+   ./myscript.ps1
+
+# Verify the Web Server is Running   
+8. az vm show --resource-group WebServerGroup --name WebVM --query "publicIpAddress" --output tsv
+
+# Clean Up Resources
+9. az group delete --name WebServerGroup --yes --no-wait
+   Remove-AzResourceGroup -Name WebServerGroup -Force
+ 
