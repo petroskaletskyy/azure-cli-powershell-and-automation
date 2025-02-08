@@ -93,6 +93,17 @@
 8. Clean Up Resources
     - Delete all created resources (WebVM, webserverlogs, WebVNet, WebServerGroup) using both Azure CLI and PowerShell.
 
+![img](/screenshots/6_1.png)
+![img](/screenshots/6_2.png)
+![img](/screenshots/6_3.png)
+![img](/screenshots/6_4.png)
+![img](/screenshots/6_5.png)
+![img](/screenshots/6_6.png)
+![img](/screenshots/6_7.png)
+![img](/screenshots/6_8.png)
+![img](/screenshots/6_9.png)
+![img](/screenshots/6_10.png)
+
 ## Practical Task 7: Create and Run an Azure Automation Runbook
 
 1. Create an Azure Automation Account named MyAutomationAccount in the East US region using Azure CLI.
