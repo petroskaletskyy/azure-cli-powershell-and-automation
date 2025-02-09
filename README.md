@@ -112,6 +112,17 @@
 4. Test the Runbook manually by executing it and verifying that the VM starts.
 5. Publish the Runbook and set up a schedule to automatically run it every day at 6:00 AM.
 
+![img](/screenshots/7_1.png)
+![img](/screenshots/7_2.png)
+![img](/screenshots/7_3.png)
+![img](/screenshots/7_4.png)
+![img](/screenshots/7_5.png)
+![img](/screenshots/7_6.png)
+![img](/screenshots/7_7.png)
+![img](/screenshots/7_8.png)
+![img](/screenshots/7_9.png)
+![img](/screenshots/7_10.png)
+
 ## Practical Task 8: Automate Resource Cleanup Using a PowerShell Runbook
 
 1. Create a new Runbook named CleanupOldResources in MyAutomationAccount.
