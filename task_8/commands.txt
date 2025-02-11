@@ -1,0 +1,12 @@
+#Create Resource group
+az group create --name OldResourceCleanupResourceGroup --location northeurope
+
+# Create an Azure Automation Account named MyAutomationAccount in the East US region using Azure CLI.
+az automation account create --name MyAutomationAccount --resource-group OldResourceCleanupResourceGroup --location northeurope
+
+# Assign Virtual Mashine Contributor to MyAutomationAccount
+az role assignment create --assignee $(az automation account show --name MyAutomationAccount --resource-group OldResourceCleanupResourceGroup --query "identity.principalId" --output tsv) \
+    --role "Contributor" --scope /subscriptions/<SubscriptionID>
+
+# Create a PowerShell Runbook named StartAzureVMRunbook inside MyAutomationAccount.
+az automation runbook create --automation-account-name MyAutomationAccount --name CleanupOldResources --resource-group OldResourceCleanupResourceGroup --type PowerShell

@@ -133,6 +133,11 @@
 6. Publish the Runbook and configure a webhook to trigger it on demand.
 7. Call the webhook using Azure CLI and verify the cleanup process.
 
+![img](/screenshots/8_1.png)
+![img](/screenshots/8_2.png)
+![img](/screenshots/8_3.png)
+![img](/screenshots/8_4.png)
+
 ## Practical Task 9: Implement Desired State Configuration (DSC) to Enforce VM Settings
 
 1. Create a new Azure Automation DSC Configuration named MyDSCConfig.
