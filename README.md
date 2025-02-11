@@ -149,6 +149,16 @@
 7. Assign the DSC configuration to an existing VM and verify compliance.
 8. Force a non-compliant state (e.g., stop the service or delete the config file), the observe Azure Automation remediating the issue automatically.
 
+![img](/screenshots/9_1.png)
+![img](/screenshots/9_2.png)
+![img](/screenshots/9_3.png)
+![img](/screenshots/9_4.png)
+![img](/screenshots/9_5.png)
+![img](/screenshots/9_6.png)
+![img](/screenshots/9_7.png)
+![img](/screenshots/9_8.png)
+![img](/screenshots/9_9.png)
+
 ## Practical Task 10: Automate Multi-Resource Deployment and Configuration Using Runbooks and DSC
 
 1. Create a new Runbook named DeployAndConfigureWebServer.
