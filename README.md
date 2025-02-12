@@ -169,3 +169,10 @@
 6. Publish and execute the Runbook, ensuring the web server is deployed and configured automatically.
 7. Verify the deployment by accessing the website hosted on the VM via its public IP address.
 8. Implement logging within the Runbook to track execution progress.
+
+![img](/screenshots/10_1.png)
+![img](/screenshots/10_2.png)
+![img](/screenshots/10_3.png)
+![img](/screenshots/10_4.png)
+![img](/screenshots/10_5.png)
+![img](/screenshots/10_6.png)

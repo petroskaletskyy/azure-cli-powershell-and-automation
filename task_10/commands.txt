@@ -1,0 +1,1 @@
+az automation runbook create --automation-account-name MyAutomationAccount --name DeployAndConfigureWebServer --resource-group OldResourceCleanupResourceGroup --type PowerShell
